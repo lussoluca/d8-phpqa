@@ -29,9 +29,6 @@ RUN composer global --update-no-dev require  \
     # Install https://github.com/Dealerdirect/phpcodesniffer-composer-installer.
     dealerdirect/phpcodesniffer-composer-installer \
 
-    # Install https://github.com/sebastianbergmann/phploc.
-    phploc/phploc \
-
     # Install https://git.drupalcode.org/project/coder.
     drupal/coder:^8.3 \
 
