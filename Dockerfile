@@ -15,7 +15,7 @@ RUN composer global require hirak/prestissimo --update-no-dev
 RUN composer global --update-no-dev require  \
 
     # Install https://github.com/EdgedesignCZ/phpqa.
-    'edgedesign/phpqa' \
+    edgedesign/phpqa \
 
     # Suggestions tools (see https://github.com/EdgedesignCZ/phpqa/blob/master/bin/suggested-tools.sh)
     jakub-onderka/php-parallel-lint \
@@ -27,13 +27,19 @@ RUN composer global --update-no-dev require  \
     sensiolabs/security-checker \
 
     # Install https://github.com/Dealerdirect/phpcodesniffer-composer-installer.
-    'dealerdirect/phpcodesniffer-composer-installer' \
+    dealerdirect/phpcodesniffer-composer-installer \
 
     # Install https://github.com/sebastianbergmann/phploc.
-    phploc/phploc --update-no-dev \
+    phploc/phploc \
 
     # Install https://git.drupalcode.org/project/coder.
-    'drupal/coder:^8.3'
+    drupal/coder:^8.3 \
+
+    # Install https://github.com/mglaman/phpstan-drupal.
+    mglaman/phpstan-drupal \
+
+    # Install https://github.com/phpstan/phpstan-deprecation-rules.
+    phpstan/phpstan-deprecation-rules
 
 RUN ln -s /tmp/vendor/bin/* /usr/local/bin
 
