@@ -12,9 +12,11 @@ Docker image for running:
 
     docker run --rm -u $UID -v $PWD:/app lucacracco/phpqa-drupal phpqa --report --ignoredDirs vendor,node_modules --analyzedDirs web/modules/custom
 
-**phploc**
+**phpqa with custom configurations**
 
-    docker run --rm -u $UID -v $PWD:/app lucacracco/phpqa-drupal phploc web/modules/custom
+    docker run --rm -u $UID -v $PWD:/app lucacracco/phpqa-drupal phpqa --config=folder/with/configurations
+    
+An example configuration files will found in [default-config](default-config).
 
 **cloc**
 

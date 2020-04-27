@@ -40,4 +40,6 @@ RUN composer global --update-no-dev require  \
 
 RUN ln -s /tmp/vendor/bin/* /usr/local/bin
 
+ADD default-config /phpqa/default-config
+
 ENTRYPOINT ["docker-php-entrypoint"]
