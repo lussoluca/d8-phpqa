@@ -38,6 +38,8 @@ RUN composer global --update-no-dev require  \
     # Install https://github.com/phpstan/phpstan-deprecation-rules.
     phpstan/phpstan-deprecation-rules
 
+RUN composer global clearcache
+
 RUN ln -s /tmp/vendor/bin/* /usr/local/bin
 
 ADD default-config /phpqa/default-config
