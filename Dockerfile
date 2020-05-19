@@ -36,7 +36,13 @@ RUN composer global --update-no-dev require  \
     mglaman/phpstan-drupal \
 
     # Install https://github.com/phpstan/phpstan-deprecation-rules.
-    phpstan/phpstan-deprecation-rules
+    phpstan/phpstan-deprecation-rules \
+
+    # Install https://github.com/phpstan/phpstan-symfony.
+    phpstan/phpstan-symfony \
+
+    # Install https://github.com/psalm/psalm-plugin-symfony.
+    psalm/plugin-symfony
 
 RUN composer global clearcache
 
